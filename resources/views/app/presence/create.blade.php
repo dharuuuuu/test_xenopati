@@ -25,7 +25,7 @@
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label for="check_in" class="form-label">Check In</label>
-                                        <input type="datetime-local" class="form-control @error('check_in') is-invalid @enderror"
+                                        <input type="time" class="form-control @error('check_in') is-invalid @enderror"
                                             id="check_in" placeholder="Masukkan waktu check in" value="{{ old('check_in') }}"
                                             name="check_in">
                                         @error('check_in')
@@ -37,7 +37,7 @@
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label for="check_out" class="form-label">Check Out</label>
-                                        <input type="datetime-local" class="form-control @error('check_out') is-invalid @enderror"
+                                        <input type="time" class="form-control @error('check_out') is-invalid @enderror"
                                             id="check_out" placeholder="Masukkan waktu check out" value="{{ old('check_out') }}"
                                             name="check_out">
                                         @error('check_out')

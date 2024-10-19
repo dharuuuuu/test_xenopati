@@ -48,12 +48,15 @@ class PresenceController extends Controller
     {
         $request->validate([
             'employee_id' => 'required|exists:employees,id', 
-            'check_in' => 'required|date_format:Y-m-d\TH:i',
-            'check_out' => 'required|date_format:Y-m-d\TH:i|after:check_in',
+            'check_in' => 'required|date_format:H:i',
+            'check_out' => 'required|date_format:H:i|after:check_in',
         ]);
 
-        $checkIn = Carbon::createFromFormat('Y-m-d\TH:i', $request->check_in)->format('Y-m-d H:i:s');
-        $checkOut = Carbon::createFromFormat('Y-m-d\TH:i', $request->check_out)->format('Y-m-d H:i:s');
+        $today = Carbon::today()->format('Y-m-d');
+
+        // Menggabungkan tanggal dengan input waktu
+        $checkIn = Carbon::createFromFormat('Y-m-d H:i', $today . ' ' . $request->check_in)->format('Y-m-d H:i:s');
+        $checkOut = Carbon::createFromFormat('Y-m-d H:i', $today . ' ' . $request->check_out)->format('Y-m-d H:i:s');
 
         $emp_presence = new EmpPresence();
         $emp_presence->employee_id = $request->employee_id;
