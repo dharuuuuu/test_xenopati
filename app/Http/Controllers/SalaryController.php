@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Employee;
 use App\Models\EmpSalary;
+use App\Models\EmpPresence;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
@@ -59,10 +60,6 @@ class SalaryController extends Controller
         $salary->loan = $request->loan;
         $salary->month = $request->month;
         $salary->year = $request->year;
-        $salary->bonus = 0;
-        $salary->bpjs = 0;
-        $salary->jp = 0;
-        $salary->total_salary = 0;
         $salary->save();
 
         return redirect()->route('salaries.index')->with('success', 'Employee berhasil ditambahkan');
@@ -109,7 +106,6 @@ class SalaryController extends Controller
         $salary->loan = $request->loan;
         $salary->month = $request->month;
         $salary->year = $request->year;
-
         $salary->save();
 
         return redirect()->route('salaries.index')->with('success', 'Data gaji berhasil diperbarui');

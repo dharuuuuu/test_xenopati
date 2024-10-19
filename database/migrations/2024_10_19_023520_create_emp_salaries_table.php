@@ -14,11 +14,11 @@ class CreateEmpSalariesTable extends Migration
             $table->integer('month');
             $table->integer('year');
             $table->double('basic_salary');
-            $table->double('bonus');
-            $table->double('bpjs');
-            $table->double('jp');
+            $table->double('bonus')->default(0);
+            $table->double('bpjs')->default(0);
+            $table->double('jp')->default(0);
             $table->double('loan');
-            $table->double('total_salary');
+            $table->double('total_salary')->default(0);
             $table->timestamps();
 
             $table->foreign('employee_id')->references('id')->on('employees');

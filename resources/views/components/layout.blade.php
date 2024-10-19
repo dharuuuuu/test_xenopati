@@ -40,6 +40,9 @@
                     <a class="nav-link {{ request()->routeIs('salaries.index') }}" href="{{ route('salaries.index') }}">
                         Salaries
                     </a>
+                    <a class="nav-link {{ request()->routeIs('salary_calculations.index') }}" href="{{ route('salary_calculations.index') }}">
+                        Salary Calculations
+                    </a>
                 </div>
             </div>
 

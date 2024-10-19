@@ -13,7 +13,7 @@ class EmployeeSeeder extends Seeder
     {
         $faker = Faker::create('id_ID');
 
-        for ($i = 0; $i < 100; $i++) {
+        for ($i = 0; $i < 5; $i++) {
             Employee::create([
                 'name' => $faker->name,
                 'email' => $faker->unique()->email,

@@ -68,7 +68,7 @@
     </div>
 
     <script>
-        function confirmDelete(employeeId) {
+        function confirmDelete(presenceId) {
             // Menampilkan SweetAlert
             Swal.fire({
                 title: 'Apakah Anda yakin?',
@@ -82,7 +82,7 @@
             }).then((result) => {
                 if (result.isConfirmed) {
                     // Jika user klik "Ya", submit form
-                    document.getElementById('delete-form-' + employeeId).submit();
+                    document.getElementById('delete-form-' + presenceId).submit();
                 }
             });
         }
