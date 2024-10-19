@@ -37,6 +37,9 @@
                     <a class="nav-link {{ request()->routeIs('presences.index') }}" href="{{ route('presences.index') }}">
                         Presences
                     </a>
+                    <a class="nav-link {{ request()->routeIs('salaries.index') }}" href="{{ route('salaries.index') }}">
+                        Salaries
+                    </a>
                 </div>
             </div>
 

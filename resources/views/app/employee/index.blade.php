@@ -19,7 +19,7 @@
                         <th scope="col">Nama</th>
                         <th scope="col">Email</th>
                         <th scope="col">Address</th>
-                        <th scope="col">Phome</th>
+                        <th scope="col">Phone</th>
                         <th scope="col">Picture</th>
                         <th scope="col"></th>
                     </tr>
