@@ -11,10 +11,10 @@ class CreateEmpPresencesTable extends Migration
         Schema::create('emp_presences', function (Blueprint $table) {
             $table->integer('id')->autoIncrement();
             $table->integer('employee_id');
-            $table->dateTime('check_in')->nullable();
-            $table->dateTime('check_out')->nullable();
-            $table->integer('late_in')->nullable();
-            $table->integer('early_out')->nullable();
+            $table->dateTime('check_in');
+            $table->dateTime('check_out');
+            $table->integer('late_in');
+            $table->integer('early_out');
             $table->timestamps();
 
             $table->foreign('employee_id')->references('id')->on('employees');

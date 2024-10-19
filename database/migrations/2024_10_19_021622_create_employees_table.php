@@ -10,12 +10,12 @@ class CreateEmployeesTable extends Migration
     {
         Schema::create('employees', function (Blueprint $table) {
             $table->integer('id')->autoIncrement();
-            $table->string('name', 100)->nullable();
-            $table->string('email', 50)->nullable();
-            $table->string('address', 100)->nullable();
-            $table->string('phone', 25)->nullable();
-            $table->string('user_picture', 255)->nullable();
-            $table->string('password', 255)->nullable();
+            $table->string('name', 100);
+            $table->string('email', 50);
+            $table->string('address', 100);
+            $table->string('phone', 25);
+            $table->string('user_picture', 255);
+            $table->string('password', 255);
             $table->timestamps();
         });
     }

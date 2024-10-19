@@ -11,14 +11,14 @@ class CreateEmpSalariesTable extends Migration
         Schema::create('emp_salaries', function (Blueprint $table) {
             $table->integer('id')->length(10)->autoIncrement();
             $table->integer('employee_id');
-            $table->integer('month')->nullable();
-            $table->integer('year')->nullable();
-            $table->double('basic_salary')->nullable();
-            $table->double('bonus')->nullable();
-            $table->double('bpjs')->nullable();
-            $table->double('jp')->nullable();
-            $table->double('loan')->nullable();
-            $table->double('total_salary')->nullable();
+            $table->integer('month');
+            $table->integer('year');
+            $table->double('basic_salary');
+            $table->double('bonus');
+            $table->double('bpjs');
+            $table->double('jp');
+            $table->double('loan');
+            $table->double('total_salary');
             $table->timestamps();
 
             $table->foreign('employee_id')->references('id')->on('employees');
