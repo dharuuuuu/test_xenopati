@@ -20,7 +20,7 @@ class EmployeeController extends Controller
             $query->where('name', 'like', "%{$request->search}%");
         }
 
-        $employees = $query->orderBy('created_at', 'desc')->paginate(10);
+        $employees = $query->orderBy('id', 'desc')->paginate(10);
 
         return view('app.employee.index', [
             'employees' => $employees,

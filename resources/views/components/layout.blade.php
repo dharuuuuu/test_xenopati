@@ -30,30 +30,12 @@
             </button>
 
             <div class="navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    {{-- <a class="nav-link {{ request()->routeIs('dashboard') ? 'active' : '' }}"
-                        href="{{ route('dashboard') }}">
-                        Dashboard
-                    </a>
-                    <a class="nav-link {{ request()->routeIs('orders.index') ? 'active' : '' }}"
-                        href="{{ route('orders.index') }}">
-                        Orders
-                    </a>
-                    <a class="nav-link {{ request()->routeIs('categories.index') ? 'active' : '' }}"
-                        href="{{ route('categories.index') }}">
-                        Categories
-                    </a>
-                    <a class="nav-link {{ request()->routeIs('products.index') ? 'active' : '' }}"
-                        href="{{ route('products.index') }}">
-                        Products
-                    </a>
-                    --}}
-                    <a class="nav-link"
-                       >
-                        Discounts
-                    </a> 
+                <div class="navbar-nav"> 
                     <a class="nav-link {{ request()->routeIs('employees.index') }}" href="{{ route('employees.index') }}">
                         Employees
+                    </a>
+                    <a class="nav-link {{ request()->routeIs('presences.index') }}" href="{{ route('presences.index') }}">
+                        Presences
                     </a>
                 </div>
             </div>
